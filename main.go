@@ -28,7 +28,7 @@ func main() {
 	uri := os.Getenv("MONGO_URI")
 
 	opts := options.Client().ApplyURI(uri)
-	// Create a new client and connect to the server
+
 	client, err := mongo.Connect(context.TODO(), opts)
 	if err != nil {
 		panic(err)

@@ -15,7 +15,7 @@ func SetupRoutes(db *mongo.Database) {
 	})
 
     app.Get("/statements", func(c *fiber.Ctx) error {
-		return controllers.GetDailyStatements(c, db.Collection("Statements"))
+		return controllers.GetDailyStatements(c, db.Collection("Statement"))
 	})
 
     app.Listen(":3000")
